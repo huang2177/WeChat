@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/shop-car/shop-car",
+    "pages/pro-detail/pro-detail",
+    "pages/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ea9518",
+    "navigationBarTitleText": "又7谭八爷专卖店",
+    "navigationBarTextStyle": "##ea9518"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#ea9518",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "谭八爷",
+        "iconPath": "images/ic_home.png",
+        "selectedIconPath": "images/ic_home1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/ic_mine.png",
+        "selectedIconPath": "images/ic_mine1.png"
+      }
+    ]
+  }
+}

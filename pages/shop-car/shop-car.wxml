@@ -1,0 +1,4 @@
+<!--pages/shop-car/shop-car.wxml-->
+<block wx:for="{{[1, 2, 3]}}">
+  <view> {{item}} </view>
+</block>

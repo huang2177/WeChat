@@ -1,0 +1,34 @@
+<!--pages/home/home.wxml-->
+<scroll-view>
+  <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+  <swiper indicator-dots="true" autoplay="true" duration="500" bindtap='listenSwiper' interval='2500'>
+    <!--swiper-item只能包含一个节点再多会自动删除-->
+    <block wx:for="{{sliderList}}" wx:for-index="index" wx:key="key">
+      <swiper-item>
+        <image class='banner' src="{{item.img}}" mode='widthFix'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--商品列表  -->
+  <!-- <view class='pro-list-container'> -->
+
+  <block wx:for="{{proList}}" wx:for-index='index' wx:key="key">
+    <view class='pro-list-container'>
+      <image class='pro-list-img' src="{{item.img}}" bindtap='goToDetail'></image>
+      <view class='pro-list-container0'>
+        <view class='pro-list-container1'>
+          <text class='pro-list-text-name'>{{item.name}}</text>
+          <text class='pro-list-text-pirce'>{{item.pirce}}</text>
+        </view>
+        <text class='pro-list-text-buy' data-index='{{index}} ' bindtap='goToOrder'>立即购买</text>
+      </view>
+    </view>
+  </block>
+  <!-- </view> -->
+</scroll-view>
+
+<!--购物车按钮  -->
+<view class='floating-container'>
+  <image bindtap='shopCar' class='floating-button' src='../../images/shop_car.png'> </image>
+</view>
