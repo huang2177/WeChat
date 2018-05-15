@@ -12,7 +12,7 @@
   display: flex;
   margin: 10px;
   padding: 10px;
-  box-shadow: 0rpx 0rpx 20rpx 1rpx lightgray;
+  box-shadow: 0rpx 0rpx 20rpx 1rpx #dbdbdb;
 }
 
 .pro-list-container0 {

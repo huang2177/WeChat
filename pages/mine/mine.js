@@ -1,16 +1,17 @@
 
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
-    motto: '',
     userInfo: {},
     hasUserInfo: false,
+    userImageBase64: '',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
+      console.log(data.hasUserInfo)
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
@@ -37,12 +38,28 @@ Page({
       })
     }
   },
+
   getUserInfo: function (e) {
-    console.log(e)
+    //console.log(this.hasUserInfo)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  getDefaultHead: function () {
+    wx.getImageInfo({
+      src: '../../images/ic_login.png',
+      complete: (res) => {
+        let base64 = wx.arrayBufferToBase64(res);
+        this.setData({
+          userImageBase64: 'data:image/jpg;base64,' + base64,
+        })
+        console.log(base64)
+      }
+    })
+    
   }
+
 })

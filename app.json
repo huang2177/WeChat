@@ -10,7 +10,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ea9518",
     "navigationBarTitleText": "又7谭八爷专卖店",
-    "navigationBarTextStyle": "##ea9518"
+    "navigationBarTextStyle": "#ea9518"
   },
   "tabBar": {
     "color": "#8a8a8a",
